@@ -2,6 +2,7 @@ using ConferenceManager.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.Design;
 using ConferenceManager.EventsServices;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace ConferenceManager.Controllers
@@ -53,6 +54,7 @@ namespace ConferenceManager.Controllers
         }
 
         //Post Event
+        [Authorize]
         [HttpPost]
         public IActionResult PostEvent(Events newEvent)
         {
