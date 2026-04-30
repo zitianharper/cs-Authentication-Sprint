@@ -17,16 +17,16 @@ namespace ConferenceManager.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ConferenceManagerController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ConferenceManagerController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public ConferenceManagerController(ILogger<ConferenceManagerController> logger)
         {
             _logger = logger;
         }
