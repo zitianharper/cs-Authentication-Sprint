@@ -52,7 +52,19 @@ namespace ConferenceManager.Controllers
             return Ok(ev); 
         }
 
+        //Post Event
+        [HttpPost]
+        public IActionResult PostEvent(Events newEvent)
+        {
+            if(newEvent == null)
+            {
+                return BadRequest();
+            }
 
+            _eventsService.CreateEvent(newEvent);
+
+            return CreatedAtAction(nameof(GetEventsById), new { id = newEvent.Id }, newEvent);
+        }
 
         //private static readonly string[] Summaries = new[]
         //{

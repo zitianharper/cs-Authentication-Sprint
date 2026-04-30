@@ -24,6 +24,11 @@ namespace ConferenceManager.EventsServices
             return _eventsModel.GrabEventsById(id);
         }
 
+        public void CreateEvent(Events newEvent)
+        {
+            _eventsModel.AddEvent(newEvent);
+        }
+
     }
 }
 

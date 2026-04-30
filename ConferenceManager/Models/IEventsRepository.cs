@@ -8,6 +8,7 @@ namespace ConferenceManager.Models
     {
         List<Events> GrabAllEvents();
         Events? GrabEventsById(int id);
+        void AddEvent(Events newEvent);
 
     }
 }

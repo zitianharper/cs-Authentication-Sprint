@@ -28,6 +28,13 @@ namespace ConferenceManager.Models
         {
             return _events.FirstOrDefault(e => e.Id == id);
         }
+
+        public void AddEvent(Events newEvent)
+        {
+            var nextId = _events.Any() ? _events.Max(newEvent => newEvent.Id) + 1 : 1;
+            newEvent.Id = nextId;
+            _events.Add(newEvent);
+        }
     }
 
 }
