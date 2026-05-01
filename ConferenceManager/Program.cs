@@ -38,9 +38,9 @@ namespace ConferenceManager
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = "your-name",
+                    ValidIssuer = "Zitian-Harper",
                     ValidateAudience = true,
-                    ValidAudience = "your-app-name",
+                    ValidAudience = "sausage-app",
                     ValidateLifetime = false,
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key)
